@@ -9,9 +9,9 @@ module API
 
       def start
         appearance = {
-          color: "#888888",
-          head_type: "regular",
-          tail_type: "regular"
+          color: "#77BCBD",
+          head_type: "fang",
+          tail_type: "hook"
         }
 
         render status: 200, json: appearance
