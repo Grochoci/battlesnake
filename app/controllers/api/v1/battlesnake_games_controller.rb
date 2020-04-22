@@ -18,8 +18,8 @@ module API
       end
 
       def move
-        head = game_params[:you][:body].first
-        body = game_params[:you][:body][1..-1]
+        head = game_params[:you][:body].first.to_h
+        body = game_params[:you][:body][1..-1].map { |section| section.to_h.symbolize_keys }
 
         possible_moves = ["up", "right", "down", "left"]
 
