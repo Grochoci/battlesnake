@@ -30,10 +30,10 @@ module API
         if (head[:x] - 1 < 0) || (body.include?({x: head[:x] - 1, y: head[:y]}))
           possible_moves.delete("left")
         end
-        if (head[:y] + 1 > game_params[:board][:height]) || (body.include?({x: head[:x], y: head[:y] + 1}))
+        if (head[:y] + 1 >= game_params[:board][:height]) || (body.include?({x: head[:x], y: head[:y] + 1}))
           possible_moves.delete("down")
         end
-        if (head[:x] + 1 > game_params[:board][:width]) || (body.include?({x: head[:x] + 1, y: head[:y]}))
+        if (head[:x] + 1 >= game_params[:board][:width]) || (body.include?({x: head[:x] + 1, y: head[:y]}))
           possible_moves.delete("right")
         end
 
